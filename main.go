@@ -1,16 +1,18 @@
 package main
 
+import "fmt"
+
 func main() {
-	firstTask := "learn go programming language"
-	secondTask := "Learn docker"
-	thirdTask := "Learn kubernaties"
-	fourthTask := "learn terraform"
-	fifthTask := "learn CI/CD"
+	fmt.Println("To Do List")
 
-	println(firstTask)
-	println(secondTask)
-	println(thirdTask)
-	println(fourthTask)
-	println(fifthTask)
+	firstTask := "Learn go "
+	secondTask := "Learn Azure"
+	thirdTask := "Get certified in Azure"
 
+	taskItem := []string{firstTask, secondTask, thirdTask}
+
+	for index, task := range taskItem {
+
+		fmt.Printf("%d: %s\n", index+1, task)
+	}
 }
