@@ -3,16 +3,19 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println("To Do List")
+	printItems()
+}
 
-	firstTask := "Learn go "
-	secondTask := "Learn Azure"
-	thirdTask := "Get certified in Azure"
+func printItems() {
+	var firstTask = "learn go"
+	var secondTask = "Do projects in go"
+	var thrdTask = "learn Azure"
 
-	taskItem := []string{firstTask, secondTask, thirdTask}
+	var taskItems = []string{firstTask, secondTask, thrdTask}
+	fmt.Println("This is the list of Today's TO-DO-List Task")
 
-	for index, task := range taskItem {
+	for index, task := range taskItems {
 
-		fmt.Printf("%d: %s\n", index+1, task)
+		fmt.Printf("%d. %s\n", index+1, task)
 	}
 }
